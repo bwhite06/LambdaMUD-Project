@@ -184,10 +184,10 @@ MVP as soon as you can and get working the list of features.
   * `curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpassword"}' localhost:8000/api/login/`
 * Response:
   * `{"key":"6b7b9d0f33bd76e75b0a52433f268d3037e42e66"}`
-
+57c18deef696e47b2d41b5ce50920c0420c9b934
 ### Initialize
 * Request:  (Replace token string with logged in user's auth token)
-  * `curl -X GET -H 'Authorization: Token 6b7b9d0f33bd76e75b0a52433f268d3037e42e66' localhost:8000/api/adv/init/`
+  * `curl -X GET -H 'Authorization: Token 57c18deef696e47b2d41b5ce50920c0420c9b934' localhost:8000/api/adv/init/`
 * Response:
   * `{"uuid": "c3ee7f04-5137-427e-8591-7fcf0557dd7b", "name": "testuser", "title": "Outside Cave Entrance", "description": "North of you, the cave mount beckons", "players": []}`
 
@@ -202,7 +202,7 @@ MVP as soon as you can and get working the list of features.
 
 ### Say (NOT YET IMPLEMENTED)
 * Request:  (Replace token string with logged in user's auth token)
-  * `curl -X POST -H 'Authorization: Token 6b7b9d0f33bd76e75b0a52433f268d3037e42e66' -H "Content-Type: application/json" -d '{"message":"Hello, world!"}' localhost:8000/api/adv/say/`
+  * `curl -X POST -H 'Authorization: Token 57c18deef696e47b2d41b5ce50920c0420c9b934' -H "Content-Type: application/json" -d '{"message":"Hello, world!"}' localhost:8000/api/adv/say/`
 * Pusher broadcast:
   * Players in current room receive a message: `<name> says "Hello, world!"`
 
