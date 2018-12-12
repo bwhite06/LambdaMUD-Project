@@ -157,6 +157,9 @@ STATIC_URL = '/static/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+DATABASE_URL="sqlite:///db.sqlite3"
+    
+
 
 import dj_database_url
 
