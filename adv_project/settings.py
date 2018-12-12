@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = bool(os.environ.get('DEBUG', ''))
 
 ALLOWED_HOSTS = ['lambda-mud-backend.herokuapp.com']
-
+DEBUG_PROPAGATE_EXCEPTIONS=True
 
 #Application definition
 
@@ -155,7 +155,7 @@ USE_TZ = True
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
