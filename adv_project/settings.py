@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['lambda-mud-backend.herokuapp.com']
 
 
-# Application definition
+#Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
