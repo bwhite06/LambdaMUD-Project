@@ -65,6 +65,7 @@ def move(request):
 def say(request):
     data = json.loads(request.body)
     message = data['message']
+    print(message)
     player = request.user.player
     player_id = player.id
     username = player.user.username
@@ -86,6 +87,6 @@ def say(request):
             },
             safe=True,
             status=200
-)
+                            )
 
  
