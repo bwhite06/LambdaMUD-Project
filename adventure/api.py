@@ -69,8 +69,8 @@ def say(request):
     print(message)
     player = request.user.player
     player_id = player.id
-    username = player.user.username
     room = player.room()
+    username = player.user.username
     current_players_UUIDs = room.playerUUIDs(player_id)
     players = room.playerNames(player_id)
 
