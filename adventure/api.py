@@ -73,12 +73,17 @@ def say(request):
     username = player.user.username
     current_players_UUIDs = room.playerUUIDs(player_id)
     players = room.playerNames(player_id)
+    if not current_players_UUIDs:
+      return  JsonResponse(
+            {
+             "message": "no player in room",
+            },)
+
 
     for i in current_players_UUIDs:
         print(f'p-channel-{i}')
         pusher.trigger(f'p-channel-{i}', u'broadcast', {'message': f'"{username}" says {message}.'})
-    
-        return JsonResponse(
+    return JsonResponse(
             {
             "name": username,
             "title": room.title,
@@ -89,5 +94,7 @@ def say(request):
             safe=True,
             status=200
                             )
+
+
 
  
