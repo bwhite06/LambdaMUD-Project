@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 #SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DEBUG', ''))
 
-ALLOWED_HOSTS = ['lambda-mud-backend.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 DEBUG_PROPAGATE_EXCEPTIONS=True
 
 #Application definition
@@ -131,11 +131,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_ALLOW_ALL= True
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-    'http://127.0.0.1:3000/' 
-    
-)
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
