@@ -63,7 +63,8 @@ def move(request):
 @csrf_exempt
 @api_view(["POST"])
 def say(request):
-    data = json.loads(request.body)
+    body_unicode = request.body.decode('utf-8')
+    data = json.loads(body_unicode)
     message = data['message']
     print(message)
     player = request.user.player
